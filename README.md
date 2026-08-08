@@ -39,9 +39,20 @@ VNC 協定實作用的是開源套件 **[RoyalVNCKit](https://github.com/royalap
 
 ### 2. 打開這個專案
 
-1. 把這個 repo clone 下來，或直接下載整個 `RemoteCC` 資料夾到你的 Mac
-2. 在 Finder 找到 `RemoteCC.xcodeproj`，**雙擊**打開（Xcode 會自動啟動）
-3. Xcode 打開後，左側會看到專案的檔案樹（跟上面「專案結構」一樣）
+建議把這個 repo clone 到固定的本地資料夾，方便之後每次開發都在同一個地方，例如：
+
+```bash
+mkdir -p ~/Documents/Projects
+cd ~/Documents/Projects
+git clone https://github.com/cs90s203/remotecc.git RemoteCC
+cd RemoteCC
+git checkout claude/vision-pro-remote-connection-qwzk7c
+```
+
+（GitHub 帳密/SSH key 沒設過的話，用 HTTPS 網址 clone 時會跳出登入視窗，照著登入即可。之後每次都在 `~/Documents/Projects/RemoteCC` 這個資料夾裡 `git pull` 抓最新版本、`git push` 上傳你的修改。）
+
+1. 在 Finder 找到 `RemoteCC.xcodeproj`（就在 `~/Documents/Projects/RemoteCC` 底下），**雙擊**打開（Xcode 會自動啟動）
+2. Xcode 打開後，左側會看到專案的檔案樹（跟上面「專案結構」一樣）
 
 ### 3. 設定簽署（Signing）—— 這步一定要做
 

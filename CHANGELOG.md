@@ -9,3 +9,4 @@
 - UI：`MacListView`（清單/新增/編輯/刪除）、`AddEditMacView`（表單）、`RemoteScreenView`（喚醒 → 連線 → 畫面顯示 → 點擊/拖曳/打字操作）
 - 支援連線任何有開啟「螢幕共享」的 Mac，不限自己 Apple ID 登入的機器
 - README 補上完整 Xcode 新手教學（安裝、簽署、抓套件、選裝置、執行、真機信任開發者）
+- README 補上建議的本地 clone 路徑（`~/Documents/Projects/RemoteCC`）與 git clone/checkout 指令
