@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E099A27A1639A533180C32BA /* RemoteCCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AB4B093859848902295C5 /* RemoteCCApp.swift */; };
+		0FB8C276387687327C418913 /* SavedMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741412077BE3E8595BCF001 /* SavedMac.swift */; };
+		6322F115DF7E02E20C5A38E1 /* WakeOnLAN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EF2FAB644CA5BDC63C3F0E /* WakeOnLAN.swift */; };
+		F3813331D74EA108B6BC6F3D /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E24826A2CEC8B065D80C7C0 /* KeychainStore.swift */; };
+		64B478B88ED97E1EC74C602E /* MacStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F2FB5E80521E107784E7B /* MacStore.swift */; };
+		D15C9856905A5D86E88444A1 /* VNCConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9893F339FE88F6CA4D376F6 /* VNCConnectionManager.swift */; };
+		673E9E6286E2096BB3F034F9 /* MacListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E0AFC32288A921D24A7F3 /* MacListView.swift */; };
+		EB4C75B9674C5187DBC8813B /* AddEditMacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4512663964DE664168C846A /* AddEditMacView.swift */; };
+		D92836D0BEF022DC7FE2FDD2 /* RemoteScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC9FA13534BBBA142D80A4 /* RemoteScreenView.swift */; };
+		59E1D904EC185303FD639B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BB255925D4CC5F2B5D0CB3 /* Assets.xcassets */; };
+		98AEE06BDC822D5DE6A8BAD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA922C7BFB30EFDCC3F94744 /* Preview Assets.xcassets */; };
+		281C5ADA50478667D8A9CDAD /* RoyalVNCKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8729EC2F957D2E72E33BF2F9 /* RoyalVNCKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C022058F9AE81F4225E24895 /* RemoteCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		349AB4B093859848902295C5 /* RemoteCCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCCApp.swift; sourceTree = "<group>"; };
+		5741412077BE3E8595BCF001 /* SavedMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMac.swift; sourceTree = "<group>"; };
+		C3EF2FAB644CA5BDC63C3F0E /* WakeOnLAN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeOnLAN.swift; sourceTree = "<group>"; };
+		0E24826A2CEC8B065D80C7C0 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		D58F2FB5E80521E107784E7B /* MacStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacStore.swift; sourceTree = "<group>"; };
+		F9893F339FE88F6CA4D376F6 /* VNCConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNCConnectionManager.swift; sourceTree = "<group>"; };
+		3C1E0AFC32288A921D24A7F3 /* MacListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacListView.swift; sourceTree = "<group>"; };
+		D4512663964DE664168C846A /* AddEditMacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditMacView.swift; sourceTree = "<group>"; };
+		57AC9FA13534BBBA142D80A4 /* RemoteScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteScreenView.swift; sourceTree = "<group>"; };
+		B6BB255925D4CC5F2B5D0CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA922C7BFB30EFDCC3F94744 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		321280E3CC88C1F57BDAED36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				281C5ADA50478667D8A9CDAD /* RoyalVNCKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D5F715F0D25AA899946C0C22 = {
+			isa = PBXGroup;
+			children = (
+				02A7D2B074463E7310B78A4F /* RemoteCC */,
+				F08BE61C2C444E79635C7E4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02A7D2B074463E7310B78A4F /* RemoteCC */ = {
+			isa = PBXGroup;
+			children = (
+				349AB4B093859848902295C5 /* RemoteCCApp.swift */,
+				29629B4FDF3849740D3EC3DD /* Models */,
+				716C1C3BF07010AC058770EF /* Services */,
+				1E62A159D4A3A8E6CCD892FB /* Views */,
+				B6BB255925D4CC5F2B5D0CB3 /* Assets.xcassets */,
+				7C51A0D034329484013DC399 /* Preview Content */,
+			);
+			path = RemoteCC;
+			sourceTree = "<group>";
+		};
+		29629B4FDF3849740D3EC3DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5741412077BE3E8595BCF001 /* SavedMac.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		716C1C3BF07010AC058770EF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C3EF2FAB644CA5BDC63C3F0E /* WakeOnLAN.swift */,
+				0E24826A2CEC8B065D80C7C0 /* KeychainStore.swift */,
+				D58F2FB5E80521E107784E7B /* MacStore.swift */,
+				F9893F339FE88F6CA4D376F6 /* VNCConnectionManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1E62A159D4A3A8E6CCD892FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C1E0AFC32288A921D24A7F3 /* MacListView.swift */,
+				D4512663964DE664168C846A /* AddEditMacView.swift */,
+				57AC9FA13534BBBA142D80A4 /* RemoteScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7C51A0D034329484013DC399 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BA922C7BFB30EFDCC3F94744 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F08BE61C2C444E79635C7E4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C022058F9AE81F4225E24895 /* RemoteCC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E6577B628D7E4DB06946ECF /* RemoteCC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4181C1B54037A53F0E2EF2DB /* Build configuration list for PBXNativeTarget "RemoteCC" */;
+			buildPhases = (
+				3CD91940EBA2FAAA9890F832 /* Sources */,
+				321280E3CC88C1F57BDAED36 /* Frameworks */,
+				9F2332224C7EDF148BC25716 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteCC;
+			packageProductDependencies = (
+				8729EC2F957D2E72E33BF2F9 /* RoyalVNCKit */,
+			);
+			productName = RemoteCC;
+			productReference = C022058F9AE81F4225E24895 /* RemoteCC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		198B0CD810FB14FA14FF9E87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					6E6577B628D7E4DB06946ECF = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 4456ADAF1202BA6FE3333E7F /* Build configuration list for PBXProject "RemoteCC" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D5F715F0D25AA899946C0C22;
+			packageReferences = (
+				15821245E3DB318EE8B41883 /* XCRemoteSwiftPackageReference "royalvnc" */,
+			);
+			productRefGroup = F08BE61C2C444E79635C7E4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E6577B628D7E4DB06946ECF /* RemoteCC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F2332224C7EDF148BC25716 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E1D904EC185303FD639B69 /* Assets.xcassets in Resources */,
+				98AEE06BDC822D5DE6A8BAD9 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CD91940EBA2FAAA9890F832 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E099A27A1639A533180C32BA /* RemoteCCApp.swift in Sources */,
+				0FB8C276387687327C418913 /* SavedMac.swift in Sources */,
+				6322F115DF7E02E20C5A38E1 /* WakeOnLAN.swift in Sources */,
+				F3813331D74EA108B6BC6F3D /* KeychainStore.swift in Sources */,
+				64B478B88ED97E1EC74C602E /* MacStore.swift in Sources */,
+				D15C9856905A5D86E88444A1 /* VNCConnectionManager.swift in Sources */,
+				673E9E6286E2096BB3F034F9 /* MacListView.swift in Sources */,
+				EB4C75B9674C5187DBC8813B /* AddEditMacView.swift in Sources */,
+				D92836D0BEF022DC7FE2FDD2 /* RemoteScreenView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6B9490C3CC6360C375BF3A42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		720E9E25D4BDA570F187A337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		CCFEB2845192C84E96AAAD1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RemoteCC/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "RemoteCC";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cs90s203.RemoteCC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+			};
+			name = Debug;
+		};
+		2BBF7AC6DBF05FD55510EF2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RemoteCC/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "RemoteCC";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cs90s203.RemoteCC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4456ADAF1202BA6FE3333E7F /* Build configuration list for PBXProject "RemoteCC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B9490C3CC6360C375BF3A42 /* Debug */,
+				720E9E25D4BDA570F187A337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4181C1B54037A53F0E2EF2DB /* Build configuration list for PBXNativeTarget "RemoteCC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCFEB2845192C84E96AAAD1F /* Debug */,
+				2BBF7AC6DBF05FD55510EF2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15821245E3DB318EE8B41883 /* XCRemoteSwiftPackageReference "royalvnc" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/royalapplications/royalvnc.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8729EC2F957D2E72E33BF2F9 /* RoyalVNCKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15821245E3DB318EE8B41883 /* XCRemoteSwiftPackageReference "royalvnc" */;
+			productName = RoyalVNCKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 198B0CD810FB14FA14FF9E87 /* Project object */;
+}
