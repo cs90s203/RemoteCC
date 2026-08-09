@@ -41,7 +41,7 @@ final class VNCConnectionManager: NSObject {
             isShared: true,
             isScalingEnabled: true,
             useDisplayLink: true,
-            inputMode: .forwardKeyboardShortcutsIfContainingFunctionKeys,
+            inputMode: .forwardKeyboardShortcutsEvenIfInUseLocally,
             isClipboardRedirectionEnabled: true,
             colorDepth: .depth24Bit,
             frameEncodings: .default

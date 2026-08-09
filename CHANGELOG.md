@@ -10,3 +10,7 @@
 - 支援連線任何有開啟「螢幕共享」的 Mac，不限自己 Apple ID 登入的機器
 - README 補上完整 Xcode 新手教學（安裝、簽署、抓套件、選裝置、執行、真機信任開發者）
 - README 補上建議的本地 clone 路徑（`~/Documents/Projects/RemoteCC`）與 git clone/checkout 指令
+
+## 修正
+
+- 修正 `VNCConnectionManager.swift` 第一次真機編譯錯誤：`inputMode` 誤用了不存在的 `.forwardKeyboardShortcutsIfContainingFunctionKeys`，對照 RoyalVNCKit 原始碼改為正確的 `.forwardKeyboardShortcutsEvenIfInUseLocally`
