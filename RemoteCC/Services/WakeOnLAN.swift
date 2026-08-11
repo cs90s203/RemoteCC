@@ -45,25 +45,46 @@ enum WakeOnLAN {
         )
 
         try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) in
+            let resumeLock = NSLock()
+            var hasResumed = false
+            func resumeOnce(_ result: Result<Void, Error>) {
+                resumeLock.lock()
+                let alreadyResumed = hasResumed
+                hasResumed = true
+                resumeLock.unlock()
+                guard !alreadyResumed else { return }
+                connection.cancel()
+                switch result {
+                case .success:
+                    continuation.resume()
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                }
+            }
+
             connection.stateUpdateHandler = { state in
                 switch state {
                 case .ready:
                     connection.send(content: payload, completion: .contentProcessed { error in
-                        connection.cancel()
                         if let error {
-                            continuation.resume(throwing: WakeOnLANError.sendFailed(error.localizedDescription))
+                            resumeOnce(.failure(WakeOnLANError.sendFailed(error.localizedDescription)))
                         } else {
-                            continuation.resume()
+                            resumeOnce(.success(()))
                         }
                     })
                 case .failed(let error):
-                    connection.cancel()
-                    continuation.resume(throwing: WakeOnLANError.sendFailed(error.localizedDescription))
+                    resumeOnce(.failure(WakeOnLANError.sendFailed(error.localizedDescription)))
                 default:
+                    // .waiting can persist indefinitely on some network paths (e.g. broadcast
+                    // restricted by the active interface), so this never blocks forever.
                     break
                 }
             }
             connection.start(queue: .main)
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                resumeOnce(.failure(WakeOnLANError.sendFailed("連線逾時")))
+            }
         }
     }
 
