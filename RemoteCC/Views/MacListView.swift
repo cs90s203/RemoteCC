@@ -18,14 +18,28 @@ struct MacListView: View {
                 } else {
                     List {
                         ForEach(store.macs) { mac in
-                            NavigationLink(value: mac) {
-                                VStack(alignment: .leading, spacing: 4) {
-                                    Text(mac.name)
-                                        .font(.headline)
-                                    Text("\(mac.host) · \(mac.macAddress)")
-                                        .font(.caption)
-                                        .foregroundStyle(.secondary)
+                            HStack {
+                                NavigationLink(value: mac) {
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text(mac.name)
+                                            .font(.headline)
+                                        Text("\(mac.host) · \(mac.macAddress)")
+                                            .font(.caption)
+                                            .foregroundStyle(.secondary)
+                                    }
                                 }
+
+                                Spacer()
+
+                                // Explicit edit button — swipe-to-reveal alone isn't a very
+                                // discoverable gesture in visionOS's gaze + pinch interaction.
+                                Button {
+                                    editingMac = mac
+                                } label: {
+                                    Image(systemName: "pencil.circle")
+                                        .font(.title3)
+                                }
+                                .buttonStyle(.plain)
                             }
                             .swipeActions(edge: .trailing) {
                                 Button("刪除", role: .destructive) {

@@ -13,4 +13,7 @@ struct SavedMac: Identifiable, Codable, Hashable {
     var vncPort: Int = 5900
     /// Optional VNC username (macOS Screen Sharing supports username + password login).
     var username: String = ""
+    /// macOS account username for SSH (used to trigger "Extend to Apple Vision Pro"
+    /// over Remote Login — separate from the VNC login above).
+    var sshUsername: String = ""
 }

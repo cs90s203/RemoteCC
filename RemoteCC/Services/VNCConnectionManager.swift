@@ -24,6 +24,9 @@ final class VNCConnectionManager: NSObject {
     private(set) var status: Status = .idle
     private(set) var screenImage: CGImage?
     private(set) var screenSize: CGSize = .zero
+    private(set) var cursorImage: CGImage?
+    private(set) var cursorSize: CGSize = .zero
+    private(set) var cursorHotspot: CGPoint = .zero
 
     private var connection: VNCConnection?
     private var mac: SavedMac?
@@ -66,6 +69,11 @@ final class VNCConnectionManager: NSObject {
     func click(atX x: UInt16, y: UInt16) {
         connection?.mouseButtonDown(.left, x: x, y: y)
         connection?.mouseButtonUp(.left, x: x, y: y)
+    }
+
+    /// Moves the pointer without changing button state, for continuous gaze tracking.
+    func move(atX x: UInt16, y: UInt16) {
+        connection?.mouseMove(x: x, y: y)
     }
 
     /// Moves the pointer (and optionally holds the left button, for dragging) to a point.
@@ -135,6 +143,14 @@ extension VNCConnectionManager: VNCConnectionDelegate {
     }
 
     func connection(_ connection: VNCConnection, didUpdateCursor cursor: VNCCursor) {
-        // Not rendering a custom cursor image for now — visionOS shows its own pointer.
+        Task { @MainActor in
+            if cursor.isEmpty {
+                cursorImage = nil
+            } else {
+                cursorImage = cursor.cgImage
+                cursorSize = cursor.cgSize
+                cursorHotspot = cursor.cgHotspot
+            }
+        }
     }
 }

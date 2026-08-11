@@ -1,13 +1,39 @@
 import Foundation
 import Security
 
-/// Minimal Keychain wrapper for storing per-Mac VNC passwords.
+/// Minimal Keychain wrapper for storing per-Mac VNC and SSH passwords.
 /// Passwords never touch UserDefaults or get synced anywhere except the device Keychain.
 enum KeychainStore {
-    private static let service = "com.cs90s203.RemoteCC.vncPassword"
+    private static let vncService = "com.cs90s203.RemoteCC.vncPassword"
+    private static let sshService = "com.cs90s203.RemoteCC.sshPassword"
 
     static func savePassword(_ password: String, for macID: UUID) {
-        let account = macID.uuidString
+        save(password, service: vncService, account: macID.uuidString)
+    }
+
+    static func password(for macID: UUID) -> String? {
+        password(service: vncService, account: macID.uuidString)
+    }
+
+    static func deletePassword(for macID: UUID) {
+        delete(service: vncService, account: macID.uuidString)
+    }
+
+    static func saveSSHPassword(_ password: String, for macID: UUID) {
+        save(password, service: sshService, account: macID.uuidString)
+    }
+
+    static func sshPassword(for macID: UUID) -> String? {
+        password(service: sshService, account: macID.uuidString)
+    }
+
+    static func deleteSSHPassword(for macID: UUID) {
+        delete(service: sshService, account: macID.uuidString)
+    }
+
+    // MARK: - Private helpers
+
+    private static func save(_ password: String, service: String, account: String) {
         let data = Data(password.utf8)
 
         let query: [String: Any] = [
@@ -25,11 +51,11 @@ enum KeychainStore {
         SecItemAdd(newItem as CFDictionary, nil)
     }
 
-    static func password(for macID: UUID) -> String? {
+    private static func password(service: String, account: String) -> String? {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service,
-            kSecAttrAccount as String: macID.uuidString,
+            kSecAttrAccount as String: account,
             kSecReturnData as String: true,
             kSecMatchLimit as String: kSecMatchLimitOne
         ]
@@ -43,11 +69,11 @@ enum KeychainStore {
         return String(data: data, encoding: .utf8)
     }
 
-    static func deletePassword(for macID: UUID) {
+    private static func delete(service: String, account: String) {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service,
-            kSecAttrAccount as String: macID.uuidString
+            kSecAttrAccount as String: account
         ]
         SecItemDelete(query as CFDictionary)
     }

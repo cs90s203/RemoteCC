@@ -7,33 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E099A27A1639A533180C32BA /* RemoteCCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AB4B093859848902295C5 /* RemoteCCApp.swift */; };
+		00513322302A631A00A4B3C7 /* Citadel in Frameworks */ = {isa = PBXBuildFile; productRef = 00513321302A631A00A4B3C7 /* Citadel */; };
+		00932D343029718E00DF659E /* RoyalVNCKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 8729EC2F957D2E72E33BF2F9 /* RoyalVNCKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0FB8C276387687327C418913 /* SavedMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741412077BE3E8595BCF001 /* SavedMac.swift */; };
-		6322F115DF7E02E20C5A38E1 /* WakeOnLAN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EF2FAB644CA5BDC63C3F0E /* WakeOnLAN.swift */; };
-		F3813331D74EA108B6BC6F3D /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E24826A2CEC8B065D80C7C0 /* KeychainStore.swift */; };
-		64B478B88ED97E1EC74C602E /* MacStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F2FB5E80521E107784E7B /* MacStore.swift */; };
-		D15C9856905A5D86E88444A1 /* VNCConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9893F339FE88F6CA4D376F6 /* VNCConnectionManager.swift */; };
-		673E9E6286E2096BB3F034F9 /* MacListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E0AFC32288A921D24A7F3 /* MacListView.swift */; };
-		EB4C75B9674C5187DBC8813B /* AddEditMacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4512663964DE664168C846A /* AddEditMacView.swift */; };
-		D92836D0BEF022DC7FE2FDD2 /* RemoteScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC9FA13534BBBA142D80A4 /* RemoteScreenView.swift */; };
-		59E1D904EC185303FD639B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BB255925D4CC5F2B5D0CB3 /* Assets.xcassets */; };
-		98AEE06BDC822D5DE6A8BAD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA922C7BFB30EFDCC3F94744 /* Preview Assets.xcassets */; };
+		B81E41EFC5BF49BF9906D00A /* MacDisplayExtender.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA27D9F515F4BC58D6AD078 /* MacDisplayExtender.swift */; };
+		9699D87ADA1641D8ABD0AFCF /* RemoteCursorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A78AA69AF14DE28506094A /* RemoteCursorTracker.swift */; };
 		281C5ADA50478667D8A9CDAD /* RoyalVNCKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8729EC2F957D2E72E33BF2F9 /* RoyalVNCKit */; };
+		59E1D904EC185303FD639B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BB255925D4CC5F2B5D0CB3 /* Assets.xcassets */; };
+		6322F115DF7E02E20C5A38E1 /* WakeOnLAN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EF2FAB644CA5BDC63C3F0E /* WakeOnLAN.swift */; };
+		64B478B88ED97E1EC74C602E /* MacStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F2FB5E80521E107784E7B /* MacStore.swift */; };
+		673E9E6286E2096BB3F034F9 /* MacListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E0AFC32288A921D24A7F3 /* MacListView.swift */; };
+		98AEE06BDC822D5DE6A8BAD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA922C7BFB30EFDCC3F94744 /* Preview Assets.xcassets */; };
+		D15C9856905A5D86E88444A1 /* VNCConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9893F339FE88F6CA4D376F6 /* VNCConnectionManager.swift */; };
+		D92836D0BEF022DC7FE2FDD2 /* RemoteScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC9FA13534BBBA142D80A4 /* RemoteScreenView.swift */; };
+		E099A27A1639A533180C32BA /* RemoteCCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AB4B093859848902295C5 /* RemoteCCApp.swift */; };
+		EB4C75B9674C5187DBC8813B /* AddEditMacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4512663964DE664168C846A /* AddEditMacView.swift */; };
+		F3813331D74EA108B6BC6F3D /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E24826A2CEC8B065D80C7C0 /* KeychainStore.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		00932D353029718E00DF659E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				00932D343029718E00DF659E /* RoyalVNCKit in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		C022058F9AE81F4225E24895 /* RemoteCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		349AB4B093859848902295C5 /* RemoteCCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCCApp.swift; sourceTree = "<group>"; };
-		5741412077BE3E8595BCF001 /* SavedMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMac.swift; sourceTree = "<group>"; };
-		C3EF2FAB644CA5BDC63C3F0E /* WakeOnLAN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeOnLAN.swift; sourceTree = "<group>"; };
 		0E24826A2CEC8B065D80C7C0 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
-		D58F2FB5E80521E107784E7B /* MacStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacStore.swift; sourceTree = "<group>"; };
-		F9893F339FE88F6CA4D376F6 /* VNCConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNCConnectionManager.swift; sourceTree = "<group>"; };
+		EEA27D9F515F4BC58D6AD078 /* MacDisplayExtender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacDisplayExtender.swift; sourceTree = "<group>"; };
+		13A78AA69AF14DE28506094A /* RemoteCursorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCursorTracker.swift; sourceTree = "<group>"; };
+		349AB4B093859848902295C5 /* RemoteCCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCCApp.swift; sourceTree = "<group>"; };
 		3C1E0AFC32288A921D24A7F3 /* MacListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacListView.swift; sourceTree = "<group>"; };
-		D4512663964DE664168C846A /* AddEditMacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditMacView.swift; sourceTree = "<group>"; };
+		5741412077BE3E8595BCF001 /* SavedMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMac.swift; sourceTree = "<group>"; };
 		57AC9FA13534BBBA142D80A4 /* RemoteScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteScreenView.swift; sourceTree = "<group>"; };
 		B6BB255925D4CC5F2B5D0CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA922C7BFB30EFDCC3F94744 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C022058F9AE81F4225E24895 /* RemoteCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3EF2FAB644CA5BDC63C3F0E /* WakeOnLAN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeOnLAN.swift; sourceTree = "<group>"; };
+		D4512663964DE664168C846A /* AddEditMacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditMacView.swift; sourceTree = "<group>"; };
+		D58F2FB5E80521E107784E7B /* MacStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacStore.swift; sourceTree = "<group>"; };
+		F9893F339FE88F6CA4D376F6 /* VNCConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNCConnectionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,20 +62,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				281C5ADA50478667D8A9CDAD /* RoyalVNCKit in Frameworks */,
+				00513322302A631A00A4B3C7 /* Citadel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D5F715F0D25AA899946C0C22 = {
-			isa = PBXGroup;
-			children = (
-				02A7D2B074463E7310B78A4F /* RemoteCC */,
-				F08BE61C2C444E79635C7E4F /* Products */,
-			);
-			sourceTree = "<group>";
-		};
 		02A7D2B074463E7310B78A4F /* RemoteCC */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +80,16 @@
 				7C51A0D034329484013DC399 /* Preview Content */,
 			);
 			path = RemoteCC;
+			sourceTree = "<group>";
+		};
+		1E62A159D4A3A8E6CCD892FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C1E0AFC32288A921D24A7F3 /* MacListView.swift */,
+				D4512663964DE664168C846A /* AddEditMacView.swift */,
+				57AC9FA13534BBBA142D80A4 /* RemoteScreenView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		29629B4FDF3849740D3EC3DD /* Models */ = {
@@ -84,18 +107,10 @@
 				0E24826A2CEC8B065D80C7C0 /* KeychainStore.swift */,
 				D58F2FB5E80521E107784E7B /* MacStore.swift */,
 				F9893F339FE88F6CA4D376F6 /* VNCConnectionManager.swift */,
+				EEA27D9F515F4BC58D6AD078 /* MacDisplayExtender.swift */,
+				13A78AA69AF14DE28506094A /* RemoteCursorTracker.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		1E62A159D4A3A8E6CCD892FB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3C1E0AFC32288A921D24A7F3 /* MacListView.swift */,
-				D4512663964DE664168C846A /* AddEditMacView.swift */,
-				57AC9FA13534BBBA142D80A4 /* RemoteScreenView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		7C51A0D034329484013DC399 /* Preview Content */ = {
@@ -104,6 +119,14 @@
 				BA922C7BFB30EFDCC3F94744 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D5F715F0D25AA899946C0C22 = {
+			isa = PBXGroup;
+			children = (
+				02A7D2B074463E7310B78A4F /* RemoteCC */,
+				F08BE61C2C444E79635C7E4F /* Products */,
+			);
 			sourceTree = "<group>";
 		};
 		F08BE61C2C444E79635C7E4F /* Products */ = {
@@ -124,6 +147,7 @@
 				3CD91940EBA2FAAA9890F832 /* Sources */,
 				321280E3CC88C1F57BDAED36 /* Frameworks */,
 				9F2332224C7EDF148BC25716 /* Resources */,
+				00932D353029718E00DF659E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +156,7 @@
 			name = RemoteCC;
 			packageProductDependencies = (
 				8729EC2F957D2E72E33BF2F9 /* RoyalVNCKit */,
+				00513321302A631A00A4B3C7 /* Citadel */,
 			);
 			productName = RemoteCC;
 			productReference = C022058F9AE81F4225E24895 /* RemoteCC.app */;
@@ -163,6 +188,7 @@
 			mainGroup = D5F715F0D25AA899946C0C22;
 			packageReferences = (
 				15821245E3DB318EE8B41883 /* XCRemoteSwiftPackageReference "royalvnc" */,
+				00513320302A631A00A4B3C7 /* XCRemoteSwiftPackageReference "Citadel" */,
 			);
 			productRefGroup = F08BE61C2C444E79635C7E4F /* Products */;
 			projectDirPath = "";
@@ -196,6 +222,8 @@
 				F3813331D74EA108B6BC6F3D /* KeychainStore.swift in Sources */,
 				64B478B88ED97E1EC74C602E /* MacStore.swift in Sources */,
 				D15C9856905A5D86E88444A1 /* VNCConnectionManager.swift in Sources */,
+				B81E41EFC5BF49BF9906D00A /* MacDisplayExtender.swift in Sources */,
+				9699D87ADA1641D8ABD0AFCF /* RemoteCursorTracker.swift in Sources */,
 				673E9E6286E2096BB3F034F9 /* MacListView.swift in Sources */,
 				EB4C75B9674C5187DBC8813B /* AddEditMacView.swift in Sources */,
 				D92836D0BEF022DC7FE2FDD2 /* RemoteScreenView.swift in Sources */,
@@ -205,6 +233,35 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		2BBF7AC6DBF05FD55510EF2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RemoteCC/Preview Content\"";
+				DEVELOPMENT_TEAM = KZ5HP5Z5JB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RemoteCC;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs90s203.RemoteCC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+			};
+			name = Release;
+		};
 		6B9490C3CC6360C375BF3A42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -321,13 +378,15 @@
 		CCFEB2845192C84E96AAAD1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RemoteCC/Preview Content\"";
+				DEVELOPMENT_TEAM = KZ5HP5Z5JB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "RemoteCC";
+				INFOPLIST_KEY_CFBundleDisplayName = RemoteCC;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -335,7 +394,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cs90s203.RemoteCC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs90s203.RemoteCC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -345,45 +404,9 @@
 			};
 			name = Debug;
 		};
-		2BBF7AC6DBF05FD55510EF2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RemoteCC/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "RemoteCC";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cs90s203.RemoteCC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "xros xrsimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 7;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4456ADAF1202BA6FE3333E7F /* Build configuration list for PBXProject "RemoteCC" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6B9490C3CC6360C375BF3A42 /* Debug */,
-				720E9E25D4BDA570F187A337 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4181C1B54037A53F0E2EF2DB /* Build configuration list for PBXNativeTarget "RemoteCC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -393,9 +416,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4456ADAF1202BA6FE3333E7F /* Build configuration list for PBXProject "RemoteCC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B9490C3CC6360C375BF3A42 /* Debug */,
+				720E9E25D4BDA570F187A337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		00513320302A631A00A4B3C7 /* XCRemoteSwiftPackageReference "Citadel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orlandos-nl/Citadel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.12.1;
+			};
+		};
 		15821245E3DB318EE8B41883 /* XCRemoteSwiftPackageReference "royalvnc" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/royalapplications/royalvnc.git";
@@ -407,6 +447,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		00513321302A631A00A4B3C7 /* Citadel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00513320302A631A00A4B3C7 /* XCRemoteSwiftPackageReference "Citadel" */;
+			productName = Citadel;
+		};
 		8729EC2F957D2E72E33BF2F9 /* RoyalVNCKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 15821245E3DB318EE8B41883 /* XCRemoteSwiftPackageReference "royalvnc" */;

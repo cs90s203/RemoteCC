@@ -13,6 +13,8 @@ struct AddEditMacView: View {
     @State private var vncPort: String = "5900"
     @State private var username: String = ""
     @State private var password: String = ""
+    @State private var sshUsername: String = ""
+    @State private var sshPassword: String = ""
 
     var body: some View {
         NavigationStack {
@@ -48,6 +50,17 @@ struct AddEditMacView: View {
                 } footer: {
                     Text("在目標 Mac 上：系統設定 > 一般 > 共享 > 打開「螢幕共享」。密碼只會存在這台裝置的 Keychain，不會上傳。")
                 }
+
+                Section {
+                    TextField("Mac 使用者帳號", text: $sshUsername)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
+                    SecureField("Mac 登入密碼", text: $sshPassword)
+                } header: {
+                    Text("延伸螢幕（SSH）")
+                } footer: {
+                    Text("在目標 Mac 上：系統設定 > 一般 > 共享 > 打開「遠端登入」。這裡填的是 Mac 的登入帳號密碼（不是螢幕共享密碼），用來遠端觸發「延伸至 Apple Vision Pro」。留空則不啟用這個功能。")
+                }
             }
             .navigationTitle(editingMac == nil ? "新增 Mac" : "編輯 Mac")
             .toolbar {
@@ -71,6 +84,8 @@ struct AddEditMacView: View {
         vncPort = String(editingMac.vncPort)
         username = editingMac.username
         password = store.password(for: editingMac)
+        sshUsername = editingMac.sshUsername
+        sshPassword = store.sshPassword(for: editingMac)
     }
 
     private func save() {
@@ -80,13 +95,14 @@ struct AddEditMacView: View {
             host: host,
             macAddress: macAddress,
             vncPort: Int(vncPort) ?? 5900,
-            username: username
+            username: username,
+            sshUsername: sshUsername
         )
 
         if editingMac != nil {
-            store.update(mac, password: password.isEmpty ? nil : password)
+            store.update(mac, password: password.isEmpty ? nil : password, sshPassword: sshPassword.isEmpty ? nil : sshPassword)
         } else {
-            store.add(mac, password: password)
+            store.add(mac, password: password, sshPassword: sshPassword)
         }
         dismiss()
     }
